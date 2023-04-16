@@ -1,0 +1,14 @@
+{
+	"extends": "@quasar/app-vite/tsconfig-preset",
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"paths": {
+			"Framework/*": [
+				"./src/Framework/*"
+			],
+			"App/*": [
+				"./src/App/*"
+			]
+		}
+	}
+}
