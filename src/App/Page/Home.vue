@@ -29,12 +29,12 @@
 <!--            <q-btn fab icon="add" color="green" class="absolute-bottom-right q-ma-md" />-->
         </view>
         <q-separator vertical size="0.5px" class="gt-xs" />
-        <transition
-            appear
-            duration="1000"
-            enter-active-class="animated shakeX"
-            leave-active-class="animated backInLeft"
-        >
+<!--        <transition-->
+<!--            appear-->
+<!--            duration="1000"-->
+<!--            enter-active-class="animated shakeX"-->
+<!--            leave-active-class="animated backInLeft"-->
+<!--        >-->
             <view class="column flex-auto" v-if="detail==true">
                 <q-toolbar>
                     <q-btn flat class="q-mr-sm" round icon="arrow_back" v-if="!$q.screen.gt.xs" @click="detail=false" />
@@ -91,7 +91,7 @@
                     </q-input>
                 </q-form>
             </view>
-        </transition>
+<!--        </transition>-->
     </view>
 </template>
 
