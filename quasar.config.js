@@ -103,23 +103,25 @@ module.exports = configure(function (/* ctx */) {
 			// directives: [],
 
 			// Quasar plugins
-			plugins: []
+			plugins: [
+				'Notify'
+			],
 		},
 
-		// animations: 'all', // --- includes all animations
+		animations: 'all', // --- includes all animations
 		// https://v2.quasar.dev/options/animations
-		animations: [],
+		// animations: [],
 
 		// https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#sourcefiles
 		sourceFiles: {
-			rootComponent: 'src/App/Main.vue',
+			rootComponent: './src/App/Main.vue',
 			router: './src/Framework/Vue/Router',
 		//   store: 'src/store/index',
 		//   registerServiceWorker: 'src-pwa/register-service-worker',
 		//   serviceWorker: 'src-pwa/custom-service-worker',
 		//   pwaManifestFile: 'src-pwa/manifest.json',
-		//   electronMain: 'src-electron/electron-main',
-		//   electronPreload: 'src-electron/electron-preload'
+		  electronMain: './src-electron/electron-main',
+		  electronPreload: './src-electron/electron-preload'
 		},
 
 		// https://v2.quasar.dev/quasar-cli-vite/developing-ssr/configuring-ssr
