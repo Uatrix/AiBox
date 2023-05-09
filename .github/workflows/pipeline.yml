@@ -13,5 +13,6 @@ jobs:
       with:
         node-version: 18
     - run: yarn
+    - run: yarn global add @quasar/cli
     - run: quasar mode add capacitor
     - run: quasar build -m capacitor -T android
