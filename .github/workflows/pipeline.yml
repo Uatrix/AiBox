@@ -13,16 +13,5 @@ jobs:
       with:
         node-version: 18
     - run: yarn
-    - run: yarn
-      working-directory: ./src-capacitor
-    - run: yarn capacitor add android
-      working-directory: ./src-capacitor
-    - run: yarn global add @quasar/icongenie
-    - run: icongenie generate -m capacitor -i ./resource/icon.png
-    - run: yarn quasar build -m capacitor -T android
-    - run: /usr/local/lib/android/sdk/build-tools/31.0.0/apksigner sign --ks=sign.jks --ks-pass=pass:hahzyjk0328 --ks-key-alias=android --key-pass=pass:hahzyjk0328 --out=./dist/capacitor/android/apk/release/app-release-signed.apk ./dist/capacitor/android/apk/release/app-release-unsigned.apk
-    - run: /usr/local/lib/android/sdk/build-tools/31.0.0/apksigner verify -v ./dist/capacitor/android/apk/release/app-release-signed.apk
-    - uses: actions/upload-artifact@v3
-      with:
-        name: dist-capacitor-android
-        path: ./dist/capacitor/android
+    - run: quasar mode add capacitor
+    - run: quasar build -m capacitor -T android
