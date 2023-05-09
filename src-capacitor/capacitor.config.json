@@ -1,0 +1,7 @@
+{
+  "appId": "net.uatrix.aibox",
+  "appName": "AiBox",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www"
+}
