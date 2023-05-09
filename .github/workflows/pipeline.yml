@@ -16,3 +16,7 @@ jobs:
     - run: yarn global add @quasar/cli
     - run: quasar mode add capacitor
     - run: quasar build -m capacitor -T android
+    - uses: actions/upload-artifact@v3
+      with:
+        name: dist-capacitor-android
+        path: ./dist/capacitor/android
